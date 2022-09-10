@@ -38,6 +38,7 @@ h1 {
 	margin: 10px;
 	padding: 20px;
 	text-align: center;
+	transition: transform .3s ease;
 }
 
 .pokemon .img-container {
@@ -68,4 +69,10 @@ h1 {
 	margin: 15px 0 7px;
 	letter-spacing: 1px;
 }
+
+.pokemon:hover {
+	-ms-transform: scale(1.2); /* IE 9 */
+	-webkit-transform: scale(1.2); /* Safari 3-8 */
+	transform: scale(1.2); 
+  }
 
