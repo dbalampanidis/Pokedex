@@ -27,6 +27,13 @@ function createPokemonCard(pokemon) {
 							pokemon.id
 						}.png" alt="${name}" />
         </div>
+        <div class="info">
+            <span class="number">#${pokemon.id
+							.toString()
+							.padStart(3, '0')}</span>
+            <h3 class="name">${name}</h3>
+            
+        </div>
     `;
 
 	pokemonEl.innerHTML = pokeInnerHTML;
