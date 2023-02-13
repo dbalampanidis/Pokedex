@@ -1,23 +1,5 @@
 const poke_container = document.querySelector('#poke_container');
 const pokemon_number = 151;
-const colors = {
-	fire: '#FDDFDF',
-	grass: '#DEFDE0',
-	electric: '#FCF7DE',
-	water: '#DEF3FD',
-	ground: '#f4e7da',
-	rock: '#d5d5d4',
-	fairy: '#fceaff',
-	poison: '#98d7a5',
-	bug: '#f8d5a3',
-	dragon: '#97b3e6',
-	psychic: '#eaeda1',
-	flying: '#F5F5F5',
-	fighting: '#E6E0D4',
-	normal: '#F5F5F5'
-};
-
-const main_types = Object.keys(colors);
 
 const fetchPokemon = async () => {
 	for (let i = 1; i <= pokemon_number; i++) {
@@ -37,10 +19,7 @@ function createPokemonCard(pokemon) {
 	pokemonEl.classList.add('pokemon');
 
     const pokemonTypes = pokemon.types.map(type => type.type.name);
-	// const type = main_types.find(type => poke_types.indexOf(type) > -1);
     const name = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
-	
-
 	
 	
 	const pokeInnerHTML = `
@@ -62,6 +41,47 @@ function createPokemonCard(pokemon) {
 	pokemonEl.innerHTML = pokeInnerHTML;
 
 	poke_container.appendChild(pokemonEl);
+
+
+
+	pokemonEl.addEventListener('click', () => {
+		showPokemonDetails(pokemon);
+	  });
+
+
+	  function showPokemonDetails(pokemon) {
+		const pokemonDetails = document.querySelector('#pokemon-details');
+		const modal = document.querySelector('#modal');
+		const closeModal = document.querySelector('#close-modal');
+		pokemonDetails.classList.add("details");
+		
+
+		pokemonDetails.innerHTML = `
+		<div class="title">
+    <h3>${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</h3>
+	</div>
+	
+	
+  `;
+
+		modal.style.display = 'block';
+
+		closeModal.addEventListener('click', () => {
+			modal.style.display = 'none';
+		  });
+
+		  window.addEventListener('click', event => {
+			if (event.target === modal) {
+			  modal.style.display = 'none';
+			}
+		  });
+		}
+
 }
 
 fetchPokemon();
+
+
+
+
+

@@ -10,7 +10,6 @@ body {
 	background: #EFEFBB;
 	background: -webkit-linear-gradient(to right, #D4D3DD, #EFEFBB);
 	background: linear-gradient(to right, #D4D3DD, #EFEFBB);
-
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -71,3 +70,57 @@ h1 {
   }
   
 
+  .modal {
+	display: none; /* Hide the modal by default */
+	position: fixed; /* Make the modal fixed in position */
+	z-index: 1; /* Set the z-index to ensure it's above other elements */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scrolling if needed */
+	background-color: rgba(0,0,0,0.4); /* Black background with opacity */
+  }
+  
+  .modal-content {
+	background-color: #fefefe;
+	margin: auto;
+	margin-top: 10%;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 50%; /* Set the width of the modal */
+	height: 50%; /* Set the height of the modal */
+	display: flex; /* Center the content vertically and horizontally */
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
+	opacity: 0.95;
+  }
+  
+  .close {
+	color: red;
+	font-size: 50px;
+	cursor: pointer;
+	margin-bottom: 420px;
+	margin-left: 900px;
+	position: absolute;
+	transition: transform .1s ease;
+  }
+
+  .details .img-container img {
+	height: 250px;
+	margin-right: 500px;
+  }
+
+  .details .title {
+	
+	justify-content: center;
+	margin-bottom: 400px;
+	font-size: 20px;
+  }
+
+  .close:hover {
+	-ms-transform: scale(1.2); /* IE 9 */
+	-webkit-transform: scale(1.2); /* Safari 3-8 */
+	transform: scale(1.2);
+  }
