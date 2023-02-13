@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400&display=swap');
+@import "type.css";
 
 * {
 	box-sizing: border-box;
@@ -39,14 +40,7 @@ h1 {
 	padding: 20px;
 	text-align: center;
 	transition: transform .3s ease;
-}
-
-.pokemon .img-container {
-	background-color: rgba(255, 255, 255, 0.6);
-	border-radius: 50%;
-	width: 120px;
-	height: 120px;
-	text-align: center;
+	width: 20%;
 }
 
 .pokemon .img-container img {
@@ -75,4 +69,5 @@ h1 {
 	-webkit-transform: scale(1.2); /* Safari 3-8 */
 	transform: scale(1.2); 
   }
+  
 
