@@ -86,41 +86,21 @@ h1 {
 	background-color: #fefefe;
 	margin: auto;
 	margin-top: 10%;
-	padding: 20px;
-	border: 1px solid #888;
-	width: 50%; /* Set the width of the modal */
-	height: 50%; /* Set the height of the modal */
-	display: flex; /* Center the content vertically and horizontally */
-	align-items: center;
-	justify-content: center;
+	padding: 30px;
 	border-radius: 10px;
 	opacity: 0.95;
   }
   
-  .close {
-	color: red;
-	font-size: 50px;
-	cursor: pointer;
-	margin-bottom: 420px;
-	margin-left: 900px;
-	position: absolute;
-	transition: transform .1s ease;
+  .pokemon-sprite {
+	width: 300px;
   }
 
-  .details .img-container img {
-	height: 250px;
-	margin-right: 500px;
-  }
+.stats {
+	background-color: #30a7d7;
+	border-radius: 10px;
+	padding: 5px;
+}
 
-  .details .title {
-	
-	justify-content: center;
-	margin-bottom: 400px;
-	font-size: 20px;
-  }
-
-  .close:hover {
-	-ms-transform: scale(1.2); /* IE 9 */
-	-webkit-transform: scale(1.2); /* Safari 3-8 */
-	transform: scale(1.2);
-  }
+.stats-title {
+	color: white;
+}
