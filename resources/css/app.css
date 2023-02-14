@@ -64,36 +64,45 @@ h1 {
 }
 
 .pokemon:hover {
-	-ms-transform: scale(1.2); /* IE 9 */
-	-webkit-transform: scale(1.2); /* Safari 3-8 */
-	transform: scale(1.2); 
-  }
-  
+	-ms-transform: scale(1.2);
+	/* IE 9 */
+	-webkit-transform: scale(1.2);
+	/* Safari 3-8 */
+	transform: scale(1.2);
+}
 
-  .modal {
-	display: none; /* Hide the modal by default */
-	position: fixed; /* Make the modal fixed in position */
-	z-index: 1; /* Set the z-index to ensure it's above other elements */
+
+.modal {
+	display: none;
+	/* Hide the modal by default */
+	position: fixed;
+	/* Make the modal fixed in position */
+	z-index: 1;
+	/* Set the z-index to ensure it's above other elements */
 	left: 0;
 	top: 0;
-	width: 100%; /* Full width */
-	height: 100%; /* Full height */
-	overflow: auto; /* Enable scrolling if needed */
-	background-color: rgba(0,0,0,0.4); /* Black background with opacity */
-  }
-  
-  .modal-content {
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Full height */
+	overflow: auto;
+	/* Enable scrolling if needed */
+	background-color: rgba(0, 0, 0, 0.4);
+	/* Black background with opacity */
+}
+
+.modal-content {
 	background-color: #fefefe;
 	margin: auto;
 	margin-top: 10%;
 	padding: 30px;
 	border-radius: 10px;
 	opacity: 0.95;
-  }
-  
-  .pokemon-sprite {
+}
+
+.pokemon-sprite {
 	width: 300px;
-  }
+}
 
 .stats {
 	background-color: #30a7d7;
